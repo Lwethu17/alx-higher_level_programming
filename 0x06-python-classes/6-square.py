@@ -4,11 +4,11 @@
 
 class Square():
     """
-        Square: defines a square.
-        Attributes:
-            size (int): size of square.
-        Method:
-                __init__ : init of size attribute for each instance.
+       Square: defines a square.
+       Attributes:
+           size (int): size of square.
+       Method:
+              __init__ : init of size attribute for each instance.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -30,15 +30,15 @@ class Square():
     def size(self):
         """ getter function for private attribute size.
             Returns:
-                size.
+                 size.
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """ setter function for private attribute size.
+        """ setter function for private attribute size
             Args:
-                value: size value to set to
+               value: size value to set to
         """
         if not (isinstance(value, int)):
             raise TypeError("size must be an integer")
@@ -50,15 +50,15 @@ class Square():
     def position(self):
         """ getter function for private attribuet position
             Returns:
-                position.
+                 position
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-            setter function for private attribute position.
-            Args:
+           setter function for private attribute position.
+           Args:
                 value: position value to set to.
         """
         if isinstance(value, tuple) and len(value) == 2:
@@ -67,23 +67,24 @@ class Square():
                     self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
-
     def area(self):
         """
-             area of the square.
+           area of the square.
         """
         return self.__size * self.__size
 
+
     def my_print(self):
         """
-            prints the square with character #
+        prints the square with character chars #
         """
         if self.__size == 0:
             print()
+
         else:
-            k, m = 0, 0
+            c, n = 0, 0
             temp = self.__position[0]
-            for k in range(self.__position[1]):
+            for c in range(self.__position[1]):
                 print()
-            for m in range(self.__size):
-                print("{}{}".format(" " * temp, "#" * self.__s
+            for n in range(self.__size):
+                print("{}{}".format(" " * temp, "#" * self.__size))
