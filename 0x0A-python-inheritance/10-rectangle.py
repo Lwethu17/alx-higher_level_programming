@@ -17,10 +17,9 @@ class Rectangle(BaseGeometry):
         Methods:
             __init__ - initialises the Rectangle.
     """
-
     def __init__(self, width, height):
         """
-            init Rectangle.
+            initialises Rectangle.
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
@@ -29,15 +28,15 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-                """
-            Returns an area of a rectangle
+        """
+            Returns the area of a rectangle
         """
         area = self.__width * self.__height
         return area
 
     def __str__(self):
         """
-            returns a string of rectangle details
+            retruns a string of rectangle details
         """
         return ("[{}] {}/{}".format(type(self).__name__,
                                     self.__width, self.__height))
